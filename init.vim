@@ -47,12 +47,12 @@ endif
 filetype plugin indent on
 syntax enable
 
-set number
-
 set expandtab
 set shiftwidth=8
 set tabstop=8
 set mouse=a
+set exrc
+set number
 
 " Search down into subfolders
 " Provides tab-completion for all file-related tasks
