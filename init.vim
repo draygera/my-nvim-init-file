@@ -17,11 +17,18 @@ if dein#load_state('/home/bdula/.config/nvim/dein')
 	call dein#add('penicolas/vim-thematic')
 	call dein#add('vim-airline/vim-airline')
 	call dein#add('vim-airline/vim-airline-themes')
+        call dein#add('vim-scripts/Calm-Breeze')
+        call dein#add('rakr/vim-one')
+        call dein#add('sonph/onehalf', {'rtp' : 'vim/'})
 	
 	" Life Helping Plugins
 	call dein#add('jiangmiao/auto-pairs')
 	call dein#add('farmergreg/vim-lastplace')
   	call dein#add('Two-Finger/hardmode')
+        call dein#add('mhinz/vim-startify')
+
+        " coding helper plugins
+        call dein#add('slohj/vim-fugitive')
 
 	call dein#end()
 	call dein#save_state()
@@ -116,18 +123,26 @@ set makeprg=bundle\ exec\ rspec\ -f\ QuickfixFormatter
 " - :cn and :cp to navigate forward and back
 
 " Visual settings
+let g:thematic#defaults = {
+                        \ 'laststatus' : 2,
+                        \ 'ruler' : 1,
+                        \ }
 
 let g:thematic#themes = {
-			\ 'coding' : {
-			\ 'laststatus' : 2,
-			\ 'airline-theme' : 'vice',
-			\ 'background' : 'dark',
-			\ 'ruler' : 1,
-			\ 'colorscheme' : 'solarized',
-			\ },
-			\ }
+                        \ 'coding' : {
+                        \ 'colorscheme' : 'kalisi',
+                        \ 'airline-theme' : 'one',
+                        \ 'background'  : 'dark',
+                        \ },
+                        \ 'cool' : {
+                        \ 'colorscheme' : 'onehalflight',
+                        \ 'airline-theme' : 'silver',
+                        \ }
+                        \ }
 
 let g:thematic#theme_name ='coding'
+
+map <F9> :ThematicNext <CR>
 
 " Airline settings
 let g:airline#extensions#tabline#enabled = 1
