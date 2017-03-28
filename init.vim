@@ -140,6 +140,7 @@ map <F9> :ThematicNext <CR>
 
 " Airline settings
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts=1
 
 " Hard Mode Settings
 let g:hardmode = 1
