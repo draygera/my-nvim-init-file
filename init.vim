@@ -2,7 +2,8 @@ if &compatible
 	set nocompatible
 endif
 
-let s:dein_dir = expand('/home/bdula/.config/nvim/dein')
+let s:nvim_conf_dir = expand($HOME . '/.config/nvim')
+let s:dein_dir = s:nvim_conf_dir . '/dein'
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
 " check if dein repo exists
@@ -18,7 +19,10 @@ if dein#load_state(s:dein_dir)
 	call dein#add(s:dein_repo_dir)
         
         " moved all plugins to a separate vim file to reduce clutter
-        source plugins.vim
+        let plugins = s:nvim_conf_dir . '/plugins.vim'
+        if filereadable(plugins)
+                exec 'source' plugins
+        endif
 
 	call dein#end()
 	call dein#save_state()
