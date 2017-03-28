@@ -1,7 +1,9 @@
 if &compatible
 	set nocompatible
 endif
-set runtimepath+=/home/bdula/.config/nvim/dein/repos/github.com/Shougo/dein.vim
+
+let s:dein_dir = '/home/bdula/.config/nvim/dein/repos/github.com/Shougo/dein.vim'
+execute 'set runtimepath^=' . s:dein_dir
 
 if dein#load_state('/home/bdula/.config/nvim/dein')
 	call dein#begin('/home/bdula/.config/nvim/dein')
@@ -149,3 +151,5 @@ let g:airline#extensions#tabline#enabled = 1
 
 " Hard Mode Settings
 let g:hardmode = 1
+
+
