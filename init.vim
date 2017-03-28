@@ -147,4 +147,4 @@ let g:hardmode = 1
 " Vimfiler settings
 let g:vimfiler_as_default_explorer = 1 
 call vimfiler#custom#profile('default', 'context' , {'direction' : 'rightbelow'})
-nnoremap <F6> :VimFilerExplorer <CR>
+nnoremap <silent> <F6> :VimFilerExplorer <CR>

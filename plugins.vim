@@ -19,6 +19,7 @@ call dein#add('farmergreg/vim-lastplace')
 call dein#add('Two-Finger/hardmode')
 call dein#add('mhinz/vim-startify')
 call dein#add('tpope/vim-commentary')
+call dein#add('tpope/vim-surround')
 
 " coding helper plugins
 call dein#add('slohj/vim-fugitive')
