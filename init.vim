@@ -2,13 +2,20 @@ if &compatible
 	set nocompatible
 endif
 
-let s:dein_dir = '/home/bdula/.config/nvim/dein/repos/github.com/Shougo/dein.vim'
-execute 'set runtimepath^=' . s:dein_dir
+let s:dein_dir = expand('/home/bdula/.config/nvim/dein')
+let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
-if dein#load_state('/home/bdula/.config/nvim/dein')
-	call dein#begin('/home/bdula/.config/nvim/dein')
+" check if dein repo exists
+if !isdirectory(s:dein_repo_dir)
+        execute '!git clone https://github.com/Shougo/dein.vim'
+endif
 
-	call dein#add('/home/bdula/.config/nvim/dein/repos/github.com/Shougo/dein.vim')
+execute 'set runtimepath^=' . s:dein_repo_dir
+
+if dein#load_state(s:dein_dir)
+	call dein#begin(s:dein_dir)
+
+	call dein#add(s:dein_repo_dir)
 	call dein#add('Shougo/denite.nvim')
         call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
         call dein#add('Shougo/unite.vim')
