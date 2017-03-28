@@ -29,12 +29,13 @@ if dein#load_state(s:dein_dir)
         call dein#add('vim-scripts/Calm-Breeze')
         call dein#add('rakr/vim-one')
         call dein#add('sonph/onehalf', {'rtp' : 'vim/'})
-	
-	" Life Helping Plugins
+
+        " Life Helping Plugins
 	call dein#add('jiangmiao/auto-pairs')
 	call dein#add('farmergreg/vim-lastplace')
   	call dein#add('Two-Finger/hardmode')
         call dein#add('mhinz/vim-startify')
+        call dein#add('tpope/vim-commentary')
 
         " coding helper plugins
         call dein#add('slohj/vim-fugitive')
@@ -159,4 +160,7 @@ let g:airline#extensions#tabline#enabled = 1
 " Hard Mode Settings
 let g:hardmode = 1
 
-
+" Vimfiler settings
+let g:vimfiler_as_default_explorer = 1 
+call vimfiler#custom#profile('default', 'context' , {'direction' : 'rightbelow'})
+nnoremap <F6> :VimFilerExplorer <CR>
