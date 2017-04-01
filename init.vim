@@ -149,3 +149,12 @@ let g:hardmode = 1
 let g:vimfiler_as_default_explorer = 1 
 call vimfiler#custom#profile('default', 'context' , {'direction' : 'rightbelow'})
 nnoremap <silent> <F6> :VimFilerExplorer <CR>
+
+" Vim-Header Plugin Settings
+let g:header_field_author = 'Brandon Dulaney'
+let g:header_field_author_email = 'draygera@gmail.com'
+let g:header_field_timestamp_format = '%m.%d.%Y'
+map <F4> :AddHeader<CR>
+
+" WolfgangMehrer/vim-plugins settings
+

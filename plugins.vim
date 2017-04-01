@@ -23,4 +23,5 @@ call dein#add('tpope/vim-surround')
 
 " coding helper plugins
 call dein#add('slohj/vim-fugitive')
-
+call dein#add('alpertuna/vim-header')
+call dein#add('WolfgangMehner/vim-plugins')
