@@ -1,0 +1,20 @@
+§ =============================================================
+§  Personal Information
+§ =============================================================
+
+SetMacro( 'AUTHOR',       'Brandon Dulaney' )
+SetMacro( 'AUTHORREF',    'DeejStar' )
+SetMacro( 'EMAIL',        'Draygera@gmail.com' )
+SetMacro( 'ORGANIZATION', 'Shades of Grey Interactive' )
+SetMacro( 'COMPANY',      '' )
+SetMacro( 'COPYRIGHT',    'Copyright (c) |YEAR|, |AUTHOR|' )
+SetMacro( 'LICENSE',      '' )
+
+§ =============================================================
+§  Date and Time Format
+§ =============================================================
+
+SetFormat( 'DATE', '%x' )
+SetFormat( 'TIME', '%H:%M' )
+SetFormat( 'YEAR', '%Y' )
+

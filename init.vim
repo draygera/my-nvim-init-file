@@ -67,7 +67,7 @@ command! MakeTags !ctags -R .
 
 " AUTOCOMPLETE:
 
-" The good stuff is documented in |ins-completion|
+" The good stuff is documented in <bar>ins-completion<bar>
 
 " HIGHLIGHTS:
 " - ^x^n for JUST this file
@@ -86,12 +86,12 @@ let g:netrw_browse_split=4  " open in prior window
 let g:netrw_altv=1          " open splits to the right
 let g:netrw_liststyle=3     " tree view
 let g:netrw_list_hide=netrw_gitignore#Hide()
-let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
+let g:netrw_list_hide.=',\(^\<bar>\s\s\)\zs\.\S\+'
 
 " NOW WE CAN:
 " - :edit a folder to open a file browser
 " - <CR>/v/t to open in an h-split/v-split/tab
-" - check |netrw-browse-maps| for more mappings
+" - check <bar>netrw-browse-maps<bar> for more mappings
 
 " SNIPPETS:
 
@@ -136,25 +136,22 @@ let g:thematic#themes = {
 
 let g:thematic#theme_name ='coding'
 
-map <F9> :ThematicNext <CR>
+nnoremap <silent> <F10> :ThematicNext <CR>
 
 " Airline settings
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts=1
 
 " Hard Mode Settings
-let g:hardmode = 1
+" let g:hardmode = 1
 
 " Vimfiler settings
 let g:vimfiler_as_default_explorer = 1 
 call vimfiler#custom#profile('default', 'context' , {'direction' : 'rightbelow'})
 nnoremap <silent> <F6> :VimFilerExplorer <CR>
-
-" Vim-Header Plugin Settings
-let g:header_field_author = 'Brandon Dulaney'
-let g:header_field_author_email = 'draygera@gmail.com'
-let g:header_field_timestamp_format = '%m.%d.%Y'
-map <F4> :AddHeader<CR>
+nnoremap <silent> <F2> :bprevious <CR>
+nnoremap <silent> <F3> :bnext <CR>
+nnoremap <silent> <F4> :bdelete <CR>
 
 " WolfgangMehrer/vim-plugins settings
-
+let g:C_GlobalTemplateFile = s:dein_dir . '/repos/github.com/WolfgangMehner/vim-plugins/c-support/templates/Templates'
