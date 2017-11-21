@@ -8,7 +8,7 @@ let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
 " check if dein repo exists
 if !isdirectory(s:dein_repo_dir)
-        execute '!git clone https://github.com/Shougo/dein.vim'
+        execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
 endif
 
 execute 'set runtimepath^=' . s:dein_repo_dir
